@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE carlot [
+    <!ELEMENT carlot (car+)>
+    <!ELEMENT car (model, description, cost, make, safetyrating, extras+, couponcode?, reviews*, promopic+, promopage, condition, transmission, drivetype, fueltype)>
+    <!ATTLIST car type CDATA #REQUIRED>
+    <!ELEMENT model (#PCDATA)>
+    <!ELEMENT description (#PCDATA)>
+    <!ELEMENT cost (#PCDATA)>
+    <!ELEMENT make (#PCDATA)>
+    <!ELEMENT safetyrating (#PCDATA)>
+    <!ELEMENT extras (option, additionalcost)>
+    <!ELEMENT couponcode (#PCDATA)>
+    <!ELEMENT option (#PCDATA)>
+    <!ELEMENT additionalcost (#PCDATA)>
+    <!ELEMENT reviews (#PCDATA)>
+    <!ELEMENT promopic (#PCDATA)>
+    <!ELEMENT promopage (#PCDATA)>
+    <!ELEMENT condition (#PCDATA)>
+    <!ELEMENT transmission (#PCDATA)>
+    <!ELEMENT drivetype (#PCDATA)>
+    <!ELEMENT fueltype (#PCDATA)>
+    <!ENTITY companyname "Jim'sCars">
+    <!ENTITY basic "Jim's Basic Insurance Package - $20monthly">
+    <!ENTITY complex "Jim's Complex Insurance Package - $50monthly">
+    <!ENTITY bcost "$20 monthly">
+    <!ENTITY ccost "$50 monthly">
+]>
+
+
+<carlot>
+    <car type="template">
+        <model></model>
+        <description></description>
+        <cost></cost>
+        <make></make>
+        <safetyrating></safetyrating>
+        <extras>
+            <option></option>
+            <additionalcost></additionalcost>
+        </extras>
+        <couponcode></couponcode>
+        <reviews></reviews>
+        <promopic></promopic>
+        <promopage></promopage>
+        <condition></condition>
+        <transmission></transmission>
+        <drivetype></drivetype>
+        <fueltype></fueltype>
+    </car>
+</carlot>

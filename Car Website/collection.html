@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit your own car - Jims Cars</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <span id="logo">Jims Car's</span>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="sports-cars.xml">Sports Cars</a></li>
+                <li><a href="electric-cars.xml">Electric Cars</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="collection.html" id="cta-button">Sell Now</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="content" style="background-color: black;">
+        <div id="collection-desc">
+            <h1>Sell your car with Jim!</h1>
+            <h3>Use the form below to upload your car to our database.</h3>
+        </div>
+        <div id="form-wrapper">
+            <form name="carForm" method="get" action="http://jkorpela.fi/cgi-bin/echo.cgi" style="width: fit-content"
+                onsubmit="return validate();">
+
+                <fieldset style="padding: 10px 30px; margin: 20px;">
+                    <legend>Personal details</legend>
+                    <br>
+                    <label for="firstname">First Name: *</label>
+                    <input type="text" placeholder="First name only" id="firstname" name="firstname">
+                    <label for="lastname">Last Name: *</label>
+                    <input type="text" placeholder="Last name only" id="lastname" name="lastname">
+                    <br><br>
+                    <label for="email">Email: *</label>
+                    <input type="email" placeholder="example@domain.com" id="email" name="email">
+                    <br><br>
+                    <label for="phone">Phone Number: *</label>
+                    <input type="tel" placeholder="Eg. 0412 635 678" id="phone" name="phone">
+                    <br><br>
+                    <label for="previous">How many cars have you previously submitted?</label>
+                    <input type="number" placeholder="0" id="previous" name="previously-sold">
+                    <br><br>
+                    <div id="binary">
+                        Have you bought a car in the last 5 years? *
+                        <label for="binaryYes">Yes</label>
+                        <input type="radio" name="binary" value="yes" id="binaryYes">
+                        <label for="binaryNo">No</label>
+                        <input type="radio" name="binary" value="no" id="binaryNo">
+                    </div>
+                    <br><br>
+                </fieldset>
+
+                <fieldset style="padding: 10px 30px; margin: 20px;">
+                    <legend>Car Details</legend>
+                    <label for="model">Car Model : *</label>
+                    <input type="text" id="model" name="model" placeholder="Car Model">
+                    <label for="type">Car Type: *</label>
+                    <select id="type" name="type">
+                        <option value="" disabled="disabled" selected>Choose an option</option>
+                        <option value="SPORT">Sports</option>
+                        <option value="ELECTRIC">Electric</option>
+                        <option value="VALUE">Value</option>
+                    </select>
+                    <br><br>
+                    <label for="description">Car Description: *</label>
+                    <input type="text" id="description" name="description">
+                    <br><br>
+                    <div id="extras">
+                        Does your car come with extras? *
+                        <label for="yes">Yes</label>
+                        <input type="checkbox" name="extras" value="yes" id="yes">
+
+                        <label for="no">No</label>
+                        <input type="checkbox" name="extras" value="no" id="no">
+                    </div>
+                    <br>
+                    <div id="coupons">
+                        Are you willing to allow Jims Coupons to be used? *
+                        <label for="c-yes">Yes</label>
+                        <input type="checkbox" name="coupons" value="yes" id="c-yes">
+
+                        <label for="c-no">No</label>
+                        <input type="checkbox" name="coupons" value="no" id="c-no">
+                    </div>
+                    <br>
+                    <label for="image">Upload an image:</label>
+                    <input type="file" id="image" name="image">
+                    <br>
+                    <br>
+                    <label for="promopage">Add a promotional link:</label>
+                    <input type="url" id="promopage" name="promopage" placeholder="https://www.ferrari.com//">
+                    <br>
+                    <br>
+                    <label for="condition">Car Condition between 1/10?</label>
+                    <input class="range" type="range" min="0" max="10" value="5" step="1" id="condition"
+                        name="condition" onmousemove="rangevalue1.value=value" />
+                    <output id="rangevalue1"></output>
+                    <br>
+                    <br>
+                    <div id="transmission">
+                        Transmission? *
+                        <label for="automatic">Auto</label>
+                        <input type="checkbox" name="transmission" value="AUTO" id="automatic">
+
+                        <label for="manual">Manual</label>
+                        <input type="checkbox" name="transmission" value="MANUAL" id="manual">
+                    </div>
+                    <br>
+                    <label for="fueltype">Fuel Type? *</label>
+                    <select id="fueltype" name="fueltype">
+                        <option value="" disabled="disabled" selected>Choose an option</option>
+                        <option value="DIESEL">Diesel</option>
+                        <option value="PETROL">Petrol</option>
+                        <option value="ELECTRIC">Electric</option>
+                    </select>
+                    <label for="drivetype">Drive Type?</label>
+                    <select id="drivetype" name="drivetype">
+                        <option value="" disabled="disabled" selected>Choose an option</option>
+                        <option value="AWD">AWD</option>
+                        <option value="RWD">RWD</option>
+                        <option value="4WD">4WD</option>
+                    </select>
+                    <br>
+                    <br>
+
+                </fieldset>
+
+                <div id="form-submit">
+                    <br>
+                    <input type="submit" value="Register" id="submit" class="f-button">
+                    <input type="reset" value="Clear Form" id="f-button" class="f-button">
+                    <br><br>
+                    <figure> All rights reserved &copy; Jims Car Sales 2021 </figure>
+                    <figure style="padding-top: 10px;">Please view <a href="terms-and-conditions.html" style="text-decoration: underline; color: black;">Terms and Conditions</a> for more.</figure>
+                </div>
+
+            </form>
+        </div>
+    </section>
+    <div style="padding: 150px; z-index: -1;"></div>
+    <footer>
+        <figure> &copy; Jims Car Sales 2021 </figure>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-and-conditions.html">Terms and Conditions</a>
+        </div>
+        <address>
+            <a href="">Jim Penman</a>
+            <a href="mailto:">hello@jimscars.com</a>
+            <a href="">xxxx xxx xxx</a>
+        </address>
+    </footer>
+</body>
+
+</html>

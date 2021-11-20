@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jims Cars</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero-contact {
+            width: 100%;
+            height: 80vh;
+            background: url("images/bg2.jpg") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .contact-wrapper {
+            height: 100%;
+            width: 100%;
+            background-color: rgb(0 0 0 / 70%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact {
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            width: 60vw;
+            background-color: white;
+            color: black;
+            justify-content: center;
+        }
+
+        .contact a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .contact a:hover {
+            color: var(--hero);
+        }
+
+        .contact-child {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 100;
+        }
+
+        .c-box {
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <span id="logo">Jims Car's</span>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="sports-cars.xml">Sports Cars</a></li>
+                <li><a href="electric-cars.xml">Electric Cars</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="collection.html" id="cta-button">Sell Now</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="content">
+        <section class="hero-contact">
+            <div class="contact-wrapper">
+                <div class="contact">
+                    <div class="contact-child">
+                        <h1>Get in touch</h1>
+                        <div style="padding-top: 10px;">
+                            <div class="c-box">
+                                <h2>Based in</h2>
+                                <a>Wamberal, NSW</a>
+                            </div>
+                            <div class="c-box">
+                                <h2>Email</h2>
+                                <a href="">contact@jimscars.com.au</a>
+                            </div>
+                            <div class="c-box">
+                                <h2>Phone</h2>
+                                <a href="tel:+">1300 558 212</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-child" id="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53286.08810647397!2d151.40439026950912!3d-33.413322804781515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b72ca14f00b74e5%3A0x5017d681632df40!2sWamberal%20NSW%202260!5e0!3m2!1sen!2sau!4v1584148255776!5m2!1sen!2sau"
+                            width="1500" height="400"  style="border:0;" allowfullscreen=""
+                            aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <footer>
+        <figure> &copy; Jims Car Sales 2021 </figure>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-and-conditions.html">Terms and Conditions</a>
+        </div>
+        <address>
+            <a href="">Jim Penman</a>
+            <a href="mailto:">hello@jimscars.com</a>
+            <a href="">xxxx xxx xxx</a>
+        </address>
+    </footer>
+</body>
+
+</html>

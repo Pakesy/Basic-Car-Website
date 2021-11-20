@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="car.xsl" type="text/xsl"?>
+
+<!DOCTYPE carlot [
+    <!ELEMENT carlot (car+)>
+    <!ELEMENT car (model, description, cost, make, safetyrating, extras+, couponcode?, reviews*, promopic+, promopage, condition, transmission, drivetype, fueltype)>
+    <!ATTLIST car type CDATA #REQUIRED>
+    <!ELEMENT model (#PCDATA)>
+    <!ELEMENT description (#PCDATA)>
+    <!ELEMENT cost (#PCDATA)>
+    <!ELEMENT make (#PCDATA)>
+    <!ELEMENT safetyrating (#PCDATA)>
+    <!ELEMENT extras (option, additionalcost)>
+    <!ELEMENT couponcode (#PCDATA)>
+    <!ELEMENT option (#PCDATA)>
+    <!ELEMENT additionalcost (#PCDATA)>
+    <!ELEMENT reviews (#PCDATA)>
+    <!ELEMENT promopic (#PCDATA)>
+    <!ELEMENT promopage (#PCDATA)>
+    <!ELEMENT condition (#PCDATA)>
+    <!ELEMENT transmission (#PCDATA)>
+    <!ELEMENT drivetype (#PCDATA)>
+    <!ELEMENT fueltype (#PCDATA)>
+    <!ENTITY companyname "Jim'sCars">
+    <!ENTITY basic "Jim's Basic Insurance Package - $20monthly">
+    <!ENTITY complex "Jim's Complex Insurance Package - $50monthly">
+    <!ENTITY bcost "$20 monthly">
+    <!ENTITY ccost "$50 monthly">
+]>
+
+
+<carlot>
+
+    <car type="electric">
+        <model>Model X</model>
+        <description>Low Km 11,627 km. As new. Sought after 6 seat luxury. Autopilot and Fully Self Drive Upgrade. Balance 8 year factory warranty</description>
+        <cost>$139,000</cost>
+        <make>Tesla</make>
+        <safetyrating>4/5</safetyrating>
+        <extras>
+            <option>&basic;</option>
+            <additionalcost>&bcost;</additionalcost>
+        </extras>
+        <couponcode>none</couponcode>
+        <reviews>Never thought id enjoy an electric car but im stoked i did! Never going back...</reviews>
+        <promopic>images/electric/1-modelx.jpg</promopic>
+        <promopage>https://www.tesla.com/en_au/modelx</promopage>
+        <condition>used</condition>
+        <transmission>auto</transmission>
+        <drivetype>AWD</drivetype>
+        <fueltype>electric</fueltype>
+    </car>
+
+    <car type="electric">
+        <model>Cooper SE Classic</model>
+        <description>
+            Looks great in black, come and see the next evolution in motoring!</description>
+        <cost>$60, 000</cost>
+        <make>Mini</make>
+        <safetyrating>3/5</safetyrating>
+        <extras>
+            <option>&complex;</option>
+            <additionalcost>&ccost;</additionalcost>
+        </extras>
+        <couponcode>JIMSPRING7</couponcode>
+        <reviews>none</reviews>
+        <promopic>images/electric/2-mini.jpg</promopic>
+        <promopage>https://www.mini.com.au/models/electric</promopage>
+        <condition>used</condition>
+        <transmission>auto</transmission>
+        <drivetype>front wheel drive</drivetype>
+        <fueltype>electric</fueltype>
+    </car>
+
+    <car type="electric">
+        <model>EQC400</model>
+        <description>
+            The future belongs to electric drive, perfectly presented in sparkling Obsidian Black Metallic over AMG-Line Interior in Black AMG Leather upholstery.</description>
+        <cost>$145, 000</cost>
+        <make>Mercedes-Benz</make>
+        <safetyrating>5/5</safetyrating>
+        <extras>
+            <option>&complex;</option>
+            <additionalcost>&ccost;</additionalcost>
+        </extras>
+        <couponcode>none</couponcode>
+        <reviews>The Car is brilliant, I purchased one for myself last year and have nothing but good things to say! 9/10</reviews>
+        <promopic>images/electric/3-merc.jpg</promopic>
+        <promopage>https://www.mercedes-benz.com.au/passengercars/mercedes-benz-cars/models/eqc/leasing-and-offers.html</promopage>
+        <condition>Demo Model</condition>
+        <transmission>Auto</transmission>
+        <drivetype>4wd</drivetype>
+        <fueltype>electric</fueltype>
+    </car>
+
+</carlot>

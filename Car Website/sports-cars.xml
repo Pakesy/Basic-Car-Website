@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="car.xsl" type="text/xsl"?>
+
+<!DOCTYPE carlot [
+    <!ELEMENT carlot (car+)>
+    <!ELEMENT car (model, description, cost, make, safetyrating, extras+, couponcode?, reviews*, promopic+, promopage, condition, transmission, drivetype, fueltype)>
+    <!ATTLIST car type CDATA #REQUIRED>
+    <!ELEMENT model (#PCDATA)>
+    <!ELEMENT description (#PCDATA)>
+    <!ELEMENT cost (#PCDATA)>
+    <!ELEMENT make (#PCDATA)>
+    <!ELEMENT safetyrating (#PCDATA)>
+    <!ELEMENT extras (option, additionalcost)>
+    <!ELEMENT couponcode (#PCDATA)>
+    <!ELEMENT option (#PCDATA)>
+    <!ELEMENT additionalcost (#PCDATA)>
+    <!ELEMENT reviews (#PCDATA)>
+    <!ELEMENT promopic (#PCDATA)>
+    <!ELEMENT promopage (#PCDATA)>
+    <!ELEMENT condition (#PCDATA)>
+    <!ELEMENT transmission (#PCDATA)>
+    <!ELEMENT drivetype (#PCDATA)>
+    <!ELEMENT fueltype (#PCDATA)>
+    <!ENTITY companyname "Jim'sCars">
+    <!ENTITY basic "Jim's Basic Insurance Package - $20monthly">
+    <!ENTITY complex "Jim's Complex Insurance Package - $50monthly">
+    <!ENTITY bcost "$20 monthly">
+    <!ENTITY ccost "$50 monthly">
+]>
+
+
+<carlot>
+
+    <car type="sports">
+        <model>2017 488 Spider</model>
+        <description>Just arrived and available for immediate delivery, this 2017 488 Spider finished in Bianco Avus on Nero leather interior with white stitching throughout. This vehicle also comes with a 4 and 5 year manufacturers warranty!</description>
+        <cost>$450, 000</cost>
+        <make>Ferrari
+        </make>
+        <safetyrating>3/5</safetyrating>
+        <extras>
+            <option>&complex;</option>
+            <additionalcost>&ccost;</additionalcost>
+        </extras>
+        <couponcode>JIM15</couponcode>
+        <reviews>Uncompromising performance, Unrivalled street appeal, Best V8 engine in existence, Brilliant ride and dynamic capabilities</reviews>
+        <promopic>images/sports/ferrari-1.jpg</promopic>
+        <promopage>https://www.ferrari.com/en-AU/auto/488-spider</promopage>
+        <condition>Demo new</condition>
+        <transmission>Auto</transmission>
+        <drivetype>Rear wheel drive</drivetype>
+        <fueltype>Petrol</fueltype>
+    </car>
+
+    <car type="sports">
+        <model>765LT SPIDER</model>
+        <description>Engineered without fear, driven by the fearless. At McLaren, we embrace the challenge and relish the unknown. Longtail models personify this spirit. Our most extreme, driver focused, pure performance cars. With a proud lineage.
+                                    The new 765LT Spider is the latest in this exclusive line. Only 765 will ever be made.</description>
+        <cost>$590, 000</cost>
+        <make>McLaren</make>
+        <safetyrating>3/5</safetyrating>
+        <extras>
+            <option>&complex;</option>
+            <additionalcost>&ccost;</additionalcost>
+        </extras>
+        <couponcode>JIM2021</couponcode>
+        <reviews>None</reviews>
+        <promopic>images/sports/mclaren-2.png</promopic>
+        <promopage>https://cars.mclaren.com/en/super-series/765lt-spider</promopage>
+        <condition>New</condition>
+        <transmission>Auto</transmission>
+        <drivetype>RWD</drivetype>
+        <fueltype>Petrol</fueltype>
+    </car>
+
+    <car type="sports">
+        <model>Huracan EVO</model>
+        <description></description>
+        <cost>$500, 000</cost>
+        <make>Lamborghini</make>
+        <safetyrating>4/5</safetyrating>
+        <extras>
+            <option>none</option>
+            <additionalcost>n/a</additionalcost>
+        </extras>
+        <couponcode>No</couponcode>
+        <reviews>"A thorough update of the Gallardo, and good enough to play ball with its rivals." - Top Gear </reviews>
+        <promopic>images/sports/lambo-3.jpg</promopic>
+        <promopage>https://www.lamborghini.com/en-en/models/huracan/huracan-evo</promopage>
+        <condition>Used</condition>
+        <transmission>Auto</transmission>
+        <drivetype>All wheel drive</drivetype>
+        <fueltype>petrol</fueltype>
+    </car>
+
+</carlot>
+

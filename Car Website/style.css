@@ -1,0 +1,425 @@
+/* ------------------------------------- Universal Components ------------------------------------- */
+
+:root {
+    --hero: red;
+    --background: #fff;
+}
+
+/* CSS Reset  */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Margin left 1cm */
+
+body {
+    margin: 1cm;
+    padding: 0;
+    font-family: Verdana;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow-x: hidden;
+    font-size: 20px;
+}
+
+/* All level 1 and 2 headings in Uppercase */
+
+h1,
+h2 {
+    text-transform: uppercase;
+}
+
+/* All level 2 headings underlined */
+
+h2 {
+    text-decoration: underline;
+}
+
+/* Navigation */
+
+#logo {
+    color: black;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding: 40px 10px;
+}
+
+nav ul {
+    display: inline-flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover {
+    color: var(--hero);
+    font-size: 110%;
+}
+
+#cta-button {
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 0px 10px;
+}
+
+#cta-button:hover {
+    border: 2px solid var(--hero);
+}
+
+nav a:active {
+    color: var(--hero);
+}
+
+nav a:visited {
+    opacity: 0.9;
+}
+
+/* Footer */
+
+footer {
+    color: white;
+    background-color: black;
+    padding: 50px 50px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+address {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+}
+
+/* Footer Queries */
+
+@media screen and (max-width: 1280px) {
+    footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    address {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Privacy Policy & Terms & Conditions */
+
+.policy {
+    color: black;
+    width: 60vw;
+    margin: auto;
+    padding: 20px 60px;
+    padding-bottom: 80px;
+}
+
+.policy h1 {
+    padding: 30px 0px;
+}
+
+.policy ul {
+    width: 32vw;
+    margin: auto;
+    text-align: left;
+    padding: 20px 0px;
+}
+
+.policy a {
+    color: black;
+    font-style: italic;
+}
+
+/* ------------------------------------- Individual Components ------------------------------------- */
+
+.content {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+}
+
+/* Index Page Content */
+
+
+/* About */
+
+.hero-about {
+    width: 100%;
+    height: 80vh;
+    background: url("images/bg4.jpg") no-repeat center center fixed;
+    z-index: -1;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 70vw;
+    margin: auto;
+    text-align: center;
+  }
+
+/* Contact */
+
+
+/* Data Collection Page */
+
+#collection-desc {
+    background-color: black;
+    width: 100%;
+    padding: 130px 0px 300px 0px;
+}
+
+form {
+    color: black;
+    z-index: 1000;
+}
+
+#form-wrapper {
+    padding: 50px;
+    background-color: white;
+    margin: -200px;
+    box-shadow: 0 25px 40px 0 rgb(0 0 0 / 10%);
+}
+
+.f-button {
+    padding: 10px 30px; 
+    border-radius: 20px;
+    color: black;
+    background-color: white;
+    margin: 20px;
+}
+
+.f-button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+/* Re-used from assignment 1 */
+/* Index */
+
+
+.hero-bg {
+    width: 100%;
+    height: 80vh;
+    background: url("images/background.jpg") no-repeat center center fixed;
+    z-index: -1;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.overlay {
+    background-color: rgb(0 0 0 / 80%);
+    width: 100%;
+    height: 100%;  
+}
+
+/* Text Align h1 to center */
+
+#hero-h1 {
+    font-size: 3rem;
+    padding: 0;
+    line-height: 0;
+    margin: 35px;
+    }
+
+#hero-h3 {
+    line-height: 0;
+}
+    
+.description {
+        line-height: 150%;
+        font-size: 2rem;
+    }
+
+.second-section {
+    width: 100%;
+    margin: auto;
+    background-color: black;
+}
+
+.wsp {
+    float: right;
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Query to remove the horizontal text at 930px */
+
+@media screen and (max-width: 930px) {
+    .wsp {
+        display: none;
+    }
+  }
+
+#horizontal {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 4rem;
+    padding-right: 15px;
+    padding-top: 50px;
+}
+
+/* Float list left */
+
+.car-list {
+        list-style: none;
+        padding-bottom: 30px;
+        float: left;
+    }
+    
+.car {
+        display: flex;
+        flex-direction: row;
+        min-height: 200px;
+        height: 30vw;
+        min-width: 660px;
+        width: 70vw;
+    }
+    
+.car-info {
+        padding: 0px 40px; 
+    }
+    
+.car img {
+        height: 100%;
+        width: auto;
+        float: left;
+        border: 2px solid black;
+        padding: 2px;
+        margin: 2px;
+    }
+    
+.car-list a {
+        text-decoration: none;
+        color: white;
+    }
+    
+.car-list li {
+        border: 2px solid white;
+        padding: 10px;
+        margin: 20px 0px;
+    }
+
+
+    .cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: white;
+        color: black;
+        padding: 50px 0px;
+    }
+    
+    .cta article {
+        padding-bottom: 10px;
+    }
+    
+    .cta a {
+        text-decoration: none;
+        color: black;
+        border: solid black;
+        margin-top: 20px;
+        padding: 10px 30px;
+    }
+    
+    .cta a:hover {
+        color: white;
+        background-color: black;
+    }
+    
+    #sale {
+        background: url("images/bg2.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+        text-align: center;
+        height: 30vh;
+    }
+    
+    #sale-overlay {
+        background-color: rgb(0 0 0 / 60%);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--hero);
+        font-size: x-large;
+        font-style: oblique;
+    }
+    
+    #christmas {
+        text-decoration: none;
+        color: var(--hero);
+        border: solid var(--hero) 1px;
+        padding: 10px 30px;
+    }
+    
+    #christmas:hover {
+        background-color: black;
+        font-size: 110%;
+    }
+
+    
