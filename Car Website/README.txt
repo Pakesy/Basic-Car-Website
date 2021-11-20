@@ -1,4 +1,4 @@
-## Car website
+Car website
 
 Basic website that was made for a uni assessment using HTML, CSS, JS, XML & XSLT. This was a fun project that helped me learn a lot about xml and xslt, also got to have a shot at some form validation which i havent had much exposure to. The only thing i didnt enjoy was some of the necessary design and architecture decisions were made to suit the brief and would not have been my first choice.
 
